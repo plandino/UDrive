@@ -1,0 +1,33 @@
+language: c
+compiler: gcc
+
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - gcc-4.8
+    - g++-4.8
+    # - libgflags-dev
+    # - gflags
+    - libsnappy-dev
+    - zlib1g-dev
+    - libbz2-dev
+
+install:
+  - export CXX="g++-4.8"
+  - g++ --version
+  # Compilar RocksDB 
+  - wget https://github.com/facebook/rocksdb/archive/master.zip
+  - unzip master.zip
+  - rm master.zip
+  - cd rocksdb-master/
+  - make static_lib
+  - cd ..
+
+script:
+  - cmake -G "Unix Makefiles"
+  - make
+  - make test
+  - ./UDrive
+
