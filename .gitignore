@@ -26,3 +26,11 @@
 *.exe
 *.out
 *.app
+
+# Agregados 
+*~
+CMakeFiles*
+CMakeCache*
+cmake_install*
+Makefile*
+CTestTestfile*
