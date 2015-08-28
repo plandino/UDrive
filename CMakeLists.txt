@@ -33,5 +33,5 @@ macro (do_test arg result)
 endmacro (do_test)
  
 # Hago los tests
-do_test (Good "Hola Mundo!!")
+do_test (Good "Hola Mundo!")
 do_test (Fail "Tristan Suarez")
