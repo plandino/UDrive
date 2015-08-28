@@ -15,7 +15,7 @@ include_directories(include/)
 file(GLOB SOURCE "src/*.cpp")
 
 #Creo el ejecutable "UDrive", a partir de los archivos de SOURCE
-add_executable(logger ${SOURCE})
+add_executable(UDrive ${SOURCE})
 
 
 #Macro que crea los test
