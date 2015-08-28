@@ -3,7 +3,7 @@
 cmake_minimum_required (VERSION 2.8)
 
 #Activo los test
-#enable_testing()
+enable_testing()
 
 #Le doy un nombre al proyecto
 project (logger)
